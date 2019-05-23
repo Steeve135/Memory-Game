@@ -21,7 +21,7 @@ class Board extends React.Component {
             squares: Array(9).fill(null),
             currentMove: 0,
             status: 'Level 1',
-            noOfClicks: 0,
+            // noOfClicks: 0,
         };
     }
 
@@ -29,7 +29,7 @@ class Board extends React.Component {
         const squares = this.state.squares.slice();
 
         // Sets the square to an X if the player makes the current guess else it restarts the board.
-        this.state.noOfClicks++;
+        // this.state.noOfClicks++;
         let guess = correctGuess(this.state.currentMove);
 
 
@@ -64,7 +64,7 @@ class Board extends React.Component {
         }
         return (
             <div>
-                <div>{"Total Clicks: " + this.state.noOfClicks}</div>
+                {/*<div>{"Total Clicks: " + this.state.noOfClicks}</div>*/}
                 <div className="status">{this.state.status}</div>
                 <div className="board-row">
                     {this.renderSquare(0)}
@@ -94,7 +94,7 @@ class Board2 extends React.Component {
             squares: Array(16).fill(null),
             currentMove: 0,
             status: 'Level 2',
-            noOfClicks: 0 + this.props.clicks, // Get the no of clicks from the parent?
+            noOfClicks: this.props.noOfClicks, // Get the no of clicks from the parent?
         };
     }
 
@@ -102,7 +102,7 @@ class Board2 extends React.Component {
         const squares = this.state.squares.slice();
 
         // Sets the square to an X if the player makes the current guess else it restarts the board.
-        this.state.noOfClicks++;
+        // this.state.noOfClicks++;
         let guess = correctGuess2(this.state.currentMove);
 
 
@@ -135,7 +135,7 @@ class Board2 extends React.Component {
         }
         return (
             <div>
-                <div>{"Total Clicks: " + this.state.noOfClicks}</div>
+                {/*<div>{"Total Clicks: " + this.state.noOfClicks}</div>*/}
                 <div className="status">{this.state.status}</div>
                 <div className="board-row">
                     {this.renderSquare(0)}
@@ -174,7 +174,7 @@ class Board3 extends React.Component {
             squares: Array(9).fill(null),
             currentMove: 0,
             status: 'Level 3',
-            noOfClicks: 0 + this.props.noOfClicks,
+            // noOfClicks: this.props.state.noOfClicks,
         };
     }
 
@@ -182,7 +182,7 @@ class Board3 extends React.Component {
         const squares = this.state.squares.slice();
 
         // Sets the square to an X if the player makes the current guess else it restarts the board.
-        this.state.noOfClicks++;
+        // this.state.noOfClicks++;
         let guess = correctGuess3(this.state.currentMove);
 
 
@@ -215,7 +215,7 @@ class Board3 extends React.Component {
         }
         return (
             <div>
-                <div>{"Total Clicks: " + this.state.noOfClicks}</div>
+                {/*<div>{"Total Clicks: " + this.state.noOfClicks}</div>*/}
                 <div className="status">{this.state.status}</div>
                 <div className="board-row">
                     {this.renderSquare(0)}
